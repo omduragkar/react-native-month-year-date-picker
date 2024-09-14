@@ -1,10 +1,20 @@
-import { StyleSheet, View } from 'react-native';
+import { useState } from 'react';
+import { Button, StyleSheet, View } from 'react-native';
 import { MonthYearDatePickerView } from 'react-native-month-year-date-picker';
 
 export default function App() {
+  const [value, setValue] = useState<string | null>(null);
+  console.log({
+    value,
+  });
   return (
     <View style={styles.container}>
-      <MonthYearDatePickerView color="#32a852" style={styles.box} />
+      <Button
+        title="Show MonthYearDatePicker"
+        onPress={() => {
+          MonthYearDatePickerView?.showPicker(setValue);
+        }}
+      />
     </View>
   );
 }

@@ -2,7 +2,7 @@
 class MonthYearDatePickerViewManager: RCTViewManager {
 
   override func view() -> (MonthYearDatePickerView) {
-    return MonthYearDatePickerView()
+    return MonthYearDatePicker()
   }
 
   @objc override static func requiresMainQueueSetup() -> Bool {
